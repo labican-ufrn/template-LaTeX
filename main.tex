@@ -1,0 +1,38 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %%
+%%           Modelo para criação de             %%
+%%            trabalhos acadêmicos              %%
+%%                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+    a4paper,        % papel A4
+    12pt,           % fonte 12
+    oneside,        % impressão em apenas uma face do papel
+    english,        % hifenizações em inglês
+    brazil,         % idioma padrão do documento
+]{abntex2}
+
+\include{lib/Preambulo}
+
+\include{lib/DocumentoInfo}
+
+\begin{document}
+    \include{lib/Comandos}      % inclui os comandos criados e alterados
+
+    \include{pre-textuais/Capa}
+    \include{pre-textuais/FolhaDeRosto}
+
+    \pagestyle{headings}        % paginação no canto superior direito
+    \pagenumbering{roman}       % paginação em números romanos
+    
+    \include{pre-textuais/Sumario}
+    \include{pre-textuais/listas/Figuras}
+    
+    \pagenumbering{arabic}      % paginação em números
+    
+    \include{textuais/Instrucoes}
+    
+    %\bibliography{pos-textuais/referencias}
+\end{document}
