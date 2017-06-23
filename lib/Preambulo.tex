@@ -7,8 +7,8 @@
 
 % pacotes importantes
 \usepackage{amsfonts, amssymb, amsmath}         % fontes e símbolos matemáticos
-\usepackage{graphicx}                           % inserir figuras
 \usepackage[T1]{fontenc}                        % codificação da fonte em 8 bits
+\usepackage{graphicx}                           % inserir figuras
 \usepackage[utf8]{inputenc}                     % acentuação direta
 
 % documento
@@ -32,3 +32,9 @@
     bibjustif,              % justificar referências
     abnt-etal-text=it       % texto (et.al.) em itálico
 ]{abntex2cite}              % Citações padrão ABNT
+
+
+% uso de quadros
+\usepackage{trivfloat}
+\floatstyle{plaintop} % Forçar posição da legenda para o topo
+\restylefloat{quadro} % Aplica a mudança de estilo no ambiente quadro
