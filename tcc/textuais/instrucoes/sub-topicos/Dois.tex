@@ -1,0 +1,17 @@
+\chapter{Elementos Pré-Textuais}
+    \label{cha:pre-textuais}
+        No \LaTeX os comandos iniciam com o caractere $\backslash$ os delimitadores dos comandos são as chaves, e, por fim os colchetes para atributos dos comandos. Neste Capítulo, cada seção irá descrever alguns arquivos que são necessário antes mesmo que o aluno possa digitar algum texto.
+        
+    \section{Principal}
+        \label{sec:principal}
+        O arquivo \textbf{Principal.tex} contém os parâmetros de formatação, bem como a classe do texto em \LaTeX, neste \textit{template} é utilizado a classe \textbf{abntex2}, pois esta classe foi desenvolvida com o propósito de auxiliar o desenvolvimento dos trabalhos acadêmicos em \LaTeX pelas normas da Associação Brasileira de Normas Técnicas (ABNT).
+        
+        Após a declaração da classe e as formatações básicas do texto há dois itens do tipo $include$ o primeiro deles, o $\backslash include\{lib/Preambulo\}$, contém as importações dos pacotes que estão sendo utilizados por todo o texto, pacotes para adicionar figuras, tabelas, quadros, bem como pacote para organizar o alinhamento do documento, codificação, entre outros. O segundo, $\backslash include\{lib/DocumentoInfo\}$, contém renomeações ou novos comandos que estão sendo utilizados no documento, além de possuir informações como o nome do autor, o nome do Documento, o local e o ano atual.
+        
+        O comando $\backslash begin\{document\}$ inicia uma estrutura onde pode ser colocados conteúdos, tabelas, imagens, etc, neste caso, tal comando indica que a partir deste ponto é onde começa o nosso trabalho e ele encerra no comando $\backslash end\{document\}$, ou seja, tudo o que estiver entre estes comandos o compilador entende que o autor deseja colocar no documento.
+        
+    \section{Pasta lib}
+        \label{sec:source-lib}
+        Nesta seção será comentado todo o conteúdo da pasta lib, bem como para que serve cada uma das linhas nos documentos lá inclusos.
+        \subsection{Preâmbulo}
+            \label{subsec:preambulo}
