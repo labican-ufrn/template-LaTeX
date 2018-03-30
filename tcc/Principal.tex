@@ -15,27 +15,59 @@
     brazil,         % idioma padrão do documento
 ]{abntex2}
 
-\include{lib/Preambulo}     % inclusão dos pacotes usados
+\input{lib/Preambulo}     % inclusão dos pacotes usados
 
-\include{lib/DocumentoInfo}     % inclusão das informações do documento e métodos criados e alterados
+\input{lib/DocumentoInfo}     % inclusão das informações do documento e métodos criados e alterados
+
+%\input{pos-textuais/GlossarioEntradas}
 
 \begin{document}
 
-    \include{pre-textuais/Capa}
-    \include{pre-textuais/FolhaDeRosto}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%    Elementos Pré-textuais    %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \input{pre-textuais/Capa}                               % Elemento Obrigatório para TCC I e II
+    \input{pre-textuais/FolhaDeRosto}                       % Elemento Obrigatório Para TCC I e II
+    %\input{pre-textuais/FichaCatalografica}                % Elemento Obrigatório TCC II
+    %\input{pre-textuais/Errata}                            % Elemento Opcional para TCC I e II
+    %\input{pre-textuais/FolhaDeAprovacao}                  % Elemento Obrigatório para TCC II
+    %\input{pre-textuais/Dedicatoria}                       % Elemento Opcional para TCC II
+    %\input{pre-textuais/Agradecimentos}                    % Elemento Opcional para TCC II
+    %\input{pre-textuais/Epigrafe}                          % Elemento Opcional para TCC II
+    %\input{pre-textuais/ResumoEAbstract}                   % Elemento Obrigatório para TCC II
 
-    \pagestyle{headings}        % paginação no canto superior direito
-    \pagenumbering{roman}       % paginação em números romanos
+    \pagestyle{headings}                                    % paginação no canto superior direito
+    \pagenumbering{roman}                                   % paginação em números romanos
     
-    %Sumário, Fuguras, Tabelas e Quadros
-    \include{pre-textuais/Listas}
+    % Figuras, Quadros, Tabelas e Sumário.
+    \input{pre-textuais/Listas}                             % Algumas Obrigatórias outras não TCC I e II
     
-    \pagenumbering{arabic}      % paginação em números
+    \pagenumbering{arabic}                                  % paginação em números
     
-    \include{textuais/instrucoes/Instrucoes}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%      Elementos Textuais      %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
+    \input{textuais/capitulos/1/Introducao}
+    \input{textuais/capitulos/2/FundamentacaoTeorica}
+    \input{textuais/capitulos/3/Metodologia}
+    \input{textuais/capitulos/4/DesenvolvimentoDaPesquisa}
+    \input{textuais/capitulos/5/Resultados}
+    %\input{textuais/capitulos/6/Conclusoes}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%    Elementos Pós-textuais    %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    %Referências
     \bibliography{pos-textuais/referencias}
     \markright{}
     
-    %\input{pos-textuais/apendices/Apendice}
+    %\input{pos-textuais/Glossario}
+    \input{pos-textuais/Apendice}
+    %\input{pos-textuais/Anexo}
+    
+    \phantompart
+    \printindex
 \end{document}

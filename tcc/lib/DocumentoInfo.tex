@@ -5,10 +5,17 @@
 %%                                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\titulo{TÍTULO}
-\autor{AUTOR}
+\titulo{TITULO DO TRABALHO}
+\tipotrabalho{Monografia (bacharel em Sistema de Informação) }
+\autor{AUTOR DO TRABALHO}
+\orientador{ORIENTADOR DO TRABALHO}     % nível acadêmico + nome 
 \local{Caicó - RN}
 \data{\the\year}
+\instituicao{Universidade Federal do Rio Grande do Norte. Centro de Ensino Superior do Seridó - Campus Caicó}
+
+\preambulo{trabalho testado}
+
+\renewcommand{\imprimirorientadorRotulo}{Orientador(a): }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                              %%
@@ -31,20 +38,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                              %%
-%%            Listas            %%
-%%                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\contentsname}{SUMÁRIO} 			 % Nome sumário em maiúsculas
-\renewcommand{\listfigurename}{Lista de Figuras} % Lista de Figuras
-\renewcommand{\listtablename}{Lista de Tabelas}  % Lista de Tableas
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                              %%
 %%            Quadros           %%
 %%                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\quadroname}{Quadro}
-\newcommand{\listofquadrosname}{Lista de Quadros} % Lista de Quadros
+\newcommand{\listofquadrosname}{Lista de quadros} % Lista de Quadros
 
 \newfloat[chapter]{quadro}{loq}{\quadroname}
 \newlistof{listofquadros}{loq}{\listofquadrosname}
