@@ -5,8 +5,8 @@
 %%                                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\titulo{TÍTULO}
-\autor{AUTOR}
+\titulo{\textbf{APRENDIZADO SEMI-SUPERVISIONADO APLICADO A CLASSIFICAÇÃO}: UM ESTUDO DE CASO COM O SELF-TRAINING PARA ANÁLISE DA VARIAÇÃO DO LIMIAR}
+\autor{ARTHUR COSTA GORGÔNIO}
 \local{Caicó - RN}
 \data{\the\year}
 
@@ -18,7 +18,6 @@
 
 \newcommand{\source}[1]{\legend{Fonte {--} {#1}}}     % criar fonte em imagens, tabelas e quadros
 
-
 % texto em arial
 %\renewcommand{\sfdefault}{phv}
 %\renewcommand{\rmdefault}{phv}
@@ -27,7 +26,34 @@
 \renewcommand{\sfdefault}{ptm}
 \renewcommand{\rmdefault}{ptm}
 
-\numberwithin{figure}{chapter}      % enumerar figuras (Capítulo.Número da figura)
-\numberwithin{table}{chapter}       % enumerar tabelas (Capítulo.Número da tabela)
+%\numberwithin{figure}{chapter}      % enumerar figuras (Capítulo.Número da figura)
+%\numberwithin{table}{chapter}       % enumerar tabelas (Capítulo.Número da tabela)
 
-\trivfloat{quadro} %uso de quadros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%            Listas            %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\contentsname}{SUMÁRIO} 			 % Nome sumário em maiúsculas
+\renewcommand{\listfigurename}{Lista de Figuras} % Lista de Figuras
+\renewcommand{\listtablename}{Lista de Tabelas}  % Lista de Tableas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%            Quadros           %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de Quadros} % Lista de Quadros
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+\setfloatlocations{quadro}{hbtp}
