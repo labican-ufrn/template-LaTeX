@@ -1,72 +1,114 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                                              %%
-%%           Modelo para criação de             %%
-%%            trabalhos acadêmicos              %%
-%%                                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%           Modelo para criação de           %%
+%%            trabalhos acadêmicos            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[
     a4paper,        % papel A4
     12pt,           % fonte 12
     oneside,        % impressão em apenas uma face do papel
-  %  article,        % formato para artigos
+%    article,        % formato para artigos
     english,        % hifenizações em inglês
     brazil,         % idioma padrão do documento
 ]{abntex2}
 
-\input{lib/Preambulo}     % inclusão dos pacotes usados
+% inclusão dos pacotes usados
+\input{lib/Preambulo}
 
-\input{lib/DocumentoInfo}     % inclusão das informações do documento e métodos criados e alterados
+% inclusão das informações do documento e métodos criados e alterados
+\input{lib/DocumentoInfo}
 
+% acrescenta as entradas do glossário
 %\input{pos-textuais/GlossarioEntradas}
+
+% cria o índice remissivo
 \makeindex
 \begin{document}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%    Elementos Pré-textuais    %%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-    \input{pre-textuais/Capa}                               % Elemento Obrigatório para TCC I e II
-    \input{pre-textuais/FolhaDeRosto}                       % Elemento Obrigatório Para TCC I e II
-    %\input{pre-textuais/FichaCatalografica}                % Elemento Obrigatório TCC II
-    %\input{pre-textuais/Errata}                            % Elemento Opcional para TCC I e II
-    %\input{pre-textuais/FolhaDeAprovacao}                  % Elemento Obrigatório para TCC II
-    %\input{pre-textuais/Dedicatoria}                       % Elemento Opcional para TCC II
-    %\input{pre-textuais/Agradecimentos}                    % Elemento Opcional para TCC II
-    %\input{pre-textuais/Epigrafe}                          % Elemento Opcional para TCC II
-    %\input{pre-textuais/ResumoEAbstract}                   % Elemento Obrigatório para TCC II
 
-    \pagestyle{headings}                                    % paginação no canto superior direito
-    \pagenumbering{roman}                                   % paginação em números romanos
+    % Elemento Obrigatório para TCC I e II
+    \input{pre-textuais/Capa}
+
+    % Elemento Obrigatório Para TCC I e II
+    \imprimirfolhaderosto
+
+    % Elemento Obrigatório TCC II
+    %\input{pre-textuais/FichaCatalografica}  
+
+    % Elemento Opcional para TCC I e II
+    %\input{pre-textuais/Errata}
+
+    % Elemento Obrigatório para TCC II
+    %\input{pre-textuais/FolhaDeAprovacao}
+
+    % Elemento Opcional para TCC II
+    %\input{pre-textuais/Dedicatoria}
+
+    % Elemento Opcional para TCC II
+    %\input{pre-textuais/Agradecimentos}
+
+    % Elemento Opcional para TCC II
+    %\input{pre-textuais/Epigrafe}
+
+    % Elemento Obrigatório para TCC II
+    %\input{pre-textuais/ResumoEAbstract}
+
+    % paginação no canto superior direito
+    \pagestyle{headings}
+    % paginação em números romanos
+    \pagenumbering{roman}
     
     % Figuras, Quadros, Tabelas e Sumário.
-    \input{pre-textuais/Listas}                             % Algumas Obrigatórias outras não TCC I e II
-    
-    \pagenumbering{arabic}                                  % paginação em números
-    
+    % Algumas Obrigatórias outras não TCC I e II
+    \input{pre-textuais/Listas}
+
+    % paginação em números
+    \pagenumbering{arabic}
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%      Elementos Textuais      %%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-    \input{textuais/capitulos/1/Introducao}                % Elemento Obrigatório para TCC I e II
-    \input{textuais/capitulos/2/FundamentacaoTeorica}      % Elemento Obrigatório para TCC I e II
-    \input{textuais/capitulos/3/Metodologia}               % Elemento Obrigatório para TCC I e II
-    \input{textuais/capitulos/4/DesenvolvimentoDaPesquisa} % Elemento Obrigatório para TCC I e II
-    \input{textuais/capitulos/5/Resultados}                % Elemento Obrigatório para TCC I e II
-    %\input{textuais/capitulos/6/Conclusoes}                % Elemento Obrigatório para TCC II
+
+    % Elemento Obrigatório para TCC I e II
+    \input{textuais/capitulos/1/Introducao}
+
+    % Elemento Obrigatório para TCC I e II
+    \input{textuais/capitulos/2/FundamentacaoTeorica}
+
+    % Elemento Obrigatório para TCC I e II
+    \input{textuais/capitulos/3/Metodologia}
+
+    % Elemento Obrigatório para TCC I e II
+    \input{textuais/capitulos/4/DesenvolvimentoDaPesquisa}
+
+    % Elemento Obrigatório para TCC I e II
+    \input{textuais/capitulos/5/Resultados}
+
+    % Elemento Obrigatório para TCC II
+    %\input{textuais/capitulos/6/Conclusoes}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%    Elementos Pós-textuais    %%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
+
     %Referências
-    \bibliography{pos-textuais/referencias}                 % Elemento Obrigatório para TCC I e II
+    % Elemento Obrigatório para TCC I e II
+    \bibliography{pos-textuais/referencias}
     \markright{}
-    
-    %\input{pos-textuais/Glossario}                         % Elemento Optativo para TCC I e II
-    \input{pos-textuais/Apendice}                          % Elemento Obrigatório para TCC I
-    %\input{pos-textuais/Anexo}                             % Elemento Optativo para TCC I e II
-    
+
+    % Elemento Optativo para TCC I e II
+    %\input{pos-textuais/Glossario}
+
+    % Elemento Obrigatório para TCC I
+    \input{pos-textuais/Apendice}
+
+    % Elemento Optativo para TCC I e II
+    %\input{pos-textuais/Anexo}
+
+    % imprime o índice remissivo
     \printindex
 \end{document}

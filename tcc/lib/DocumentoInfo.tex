@@ -1,31 +1,30 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                                              %%
-%%          InformaÃ§Ãµes do documento            %%
-%%                                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%          Informações do documento          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \titulo{TITULO DO TRABALHO}
-\tipotrabalho{Monografia (bacharel em Sistema de InformaÃ§Ã£o) }
+\tipotrabalho{Monografia (bacharel em Sistema de Informação) }
 \autor{AUTOR DO TRABALHO}
-\orientador{ORIENTADOR DO TRABALHO}     % nÃ­vel acadÃªmico + nome
-\coorientador{COORIENTADOR DO TRABALHO}     % nÃ­vel acadÃªmico + nome
-\local{CaicÃ³ - RN}
+\orientador{ORIENTADOR DO TRABALHO}     % ní­vel acadêmico + nome
+\local{Caicó - RN}
 \data{\the\year}
-\instituicao{Universidade Federal do Rio Grande do Norte. Centro de Ensino Superior do SeridÃ³ - Campus CaicÃ³}
+\instituicao{Universidade Federal do Rio Grande do Norte. Centro de Ensino Superior do Seridó - Campus Caicó}
 
-\preambulo{Trabalho de conclusÃ£o de curso apresentado ao curso de graduaÃ§Ã£o em Sistemas de InformaÃ§Ã£o, como parte dos requisitos para obtenÃ§Ã£o do tÃ­tulo de Bacharel em Sistemas de InformaÃ§Ã£o da Universidade Federal do Rio Grande do Norte.}
+\preambulo{Trabalho de conclusão de curso apresentado ao curso de graduação em Sistemas de Informação, como parte dos requisitos para obtenção do tí­tulo de Bacharel em Sistemas de Informação da Universidade Federal do Rio Grande do Norte.}
+
+% comente se o seu trabalho não possui co-orientador
+\coorientador{COORIENTADOR DO TRABALHO}     % ní­vel acadêmico + nome
 
 \renewcommand{\imprimirorientadorRotulo}{Orientador(a): }
 \renewcommand{\imprimircoorientadorRotulo}{Co-Orientador(a): }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                                              %%
-%%        Comandos usados no documento          %%
-%%                                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Comandos usados no documento        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\source}[1]{\legend{Fonte {--} {#1}}}     % criar fonte em imagens, tabelas e quadros
+% criar fonte em imagens, tabelas e quadros
+\newcommand{\source}[1]{\legend{Fonte {--} {#1}}}
 
 % texto em arial
 %\renewcommand{\sfdefault}{phv}
@@ -35,14 +34,15 @@
 \renewcommand{\sfdefault}{ptm}
 \renewcommand{\rmdefault}{ptm}
 
-%\numberwithin{figure}{chapter}      % enumerar figuras (CapÃ­tulo.NÃºmero da figura)
-%\numberwithin{table}{chapter}       % enumerar tabelas (CapÃ­tulo.NÃºmero da tabela)
+% enumerar figuras (Capítulo.Número da figura)
+%\numberwithin{figure}{chapter}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                              %%
-%%            Quadros           %%
-%%                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% enumerar tabelas (Capí­tulo.Número da tabela)
+%\numberwithin{table}{chapter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%           Quadros           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\quadroname}{Quadro}
 \newcommand{\listofquadrosname}{Lista de quadros} % Lista de Quadros
 
@@ -50,10 +50,11 @@
 \newlistof{listofquadros}{loq}{\listofquadrosname}
 \newlistentry{quadro}{loq}{0}
 
-% configuraÃ§Ãµes para atender Ã s regras da ABNT
+% configurações para atender às regras da ABNT
 \setfloatadjustment{quadro}{\centering}
 \counterwithout{quadro}{chapter}
 \renewcommand{\cftquadroname}{\quadroname\space} 
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
 \setfloatlocations{quadro}{hbtp}
+
