@@ -1,0 +1,32 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%           Modelo para criação de           %%
+%%            Relatório de estágio            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+    a4paper,        % papel A4
+    12pt,           % fonte 12
+    oneside,        % impressão em apenas uma face do papel
+    english,        % hifenizações em inglês
+    brazil,         % idioma padrão do documento
+]{abntex2}
+
+% inclusão dos pacotes usados
+\input{lib/Preambulo}
+
+% inclusão das informações do documento e métodos criados e alterados
+\input{lib/DocumentoInfo}
+
+\begin{document}
+
+    \input{pre-textuais/Listas.tex}
+
+    \input{textuais/capitulo_1/Introducao.tex}
+    \input{textuais/capitulo_2/FundamentacaoTeorica.tex}
+    \input{textuais/capitulo_3/AtividadesDesenvolvidas.tex}
+    \input{textuais/capitulo_4/Conclusoes.tex}
+
+    \bibliography{pos-textuais/referencias}
+    \markright{}
+\end{document}
