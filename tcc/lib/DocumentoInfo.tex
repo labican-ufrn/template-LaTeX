@@ -1,3 +1,4 @@
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%          Informações do documento          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -6,24 +7,28 @@
 \tipotrabalho{Monografia (bacharel em Sistema de Informação) }
 \autor{AUTOR DO TRABALHO}
 \orientador{ORIENTADOR DO TRABALHO}     % nível acadêmico + nome
-\local{Caicó - RN}
+\local{Caicó- RN}
 \data{\the\year}
-\instituicao{Universidade Federal do Rio Grande do Norte. Centro de Ensino Superior do Seridó - Campus Caicó}
+\instituicao{
+    UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE\par
+    CENTRO DE ENSINO SUPERIOR DO SERIDÓ \par
+    DEPARTAMENTO DE COMPUTAÇÃO E TECNOLOGIA \par
+    BACHARELADO EM SISTEMAS DE INFORMAÇÃO \par
+}
 
 \preambulo{Trabalho de conclusão de curso apresentado ao curso de graduação em Sistemas de Informação, como parte dos requisitos para obtenção do título de Bacharel em Sistemas de Informação da Universidade Federal do Rio Grande do Norte.}
 
-% comente se o seu trabalho não possui co-orientador
-\coorientador{COORIENTADOR DO TRABALHO}     % nível acadêmico + nome
-
 \renewcommand{\imprimirorientadorRotulo}{Orientador(a): }
-\renewcommand{\imprimircoorientadorRotulo}{Co-Orientador(a): }
+\renewcommand{\imprimircoorientadorRotulo}{Co-orientador(a): }
+\renewcommand{\imprimircapa}{\input{pre-textuais/Capa}}
+\renewcommand{\imprimirfolhaderosto}{\input{pre-textuais/FolhaDeRosto}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %%
+%%        Comandos usados no documento          %%
+%%                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%        Comandos usados no documento        %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% criar fonte em imagens, tabelas e quadros
-\newcommand{\source}[1]{\legend{Fonte {--} {#1}}}
+\newcommand{\source}[1]{\legend{Fonte {--} {#1}}}     % criar fonte em imagens, tabelas e quadros
 
 % texto em arial
 %\renewcommand{\sfdefault}{phv}
@@ -33,17 +38,12 @@
 \renewcommand{\sfdefault}{ptm}
 \renewcommand{\rmdefault}{ptm}
 
-% enumerar figuras (Capítulo.Número da figura)
-%\numberwithin{figure}{chapter}
-
-% enumerar tabelas (Capí­tulo.Número da tabela)
-%\numberwithin{table}{chapter}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%           Quadros           %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%            Quadros           %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\quadroname}{Quadro}
-\newcommand{\listofquadrosname}{Lista de quadros} % Lista de Quadros
 
 \newfloat[chapter]{quadro}{loq}{\quadroname}
 \newlistof{listofquadros}{loq}{\listofquadrosname}
@@ -56,3 +56,72 @@
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
 \setfloatlocations{quadro}{hbtp}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %%
+%%   Configurações de aparência do PDF final    %%
+%%                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%      Informações do PDF      %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\hypersetup{
+    %  	pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+        pdfsubject={\imprimirpreambulo},
+        pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+    %   false: boxed links; true: colored links
+		colorlinks=true,
+    % 	color of internal links
+        linkcolor=blue,
+    %   color of links to bibliography
+        citecolor=blue,
+    %   color of file links
+        filecolor=magenta,
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%         Indentação           %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.5cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%         Algoritmos           %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\algorithmicindent}{3.0em}
+\renewcommand{\algorithmicrequire}{\textbf{entrada}}
+\renewcommand{\algorithmicensure}{\textbf{garanta}}
+\renewcommand{\algorithmicreturn}{\textbf{retorne}}
+\renewcommand{\algorithmicor}{\textbf{ou}}
+\renewcommand{\algorithmicand}{\textbf{e}}
+\renewcommand{\algorithmicend}{\textbf{fim}}
+\renewcommand{\algorithmicif}{\textbf{se}}
+\renewcommand{\algorithmicelse}{\textbf{sen\~ao}}
+\renewcommand{\algorithmicthen}{\textbf{ent\~ao}}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para cada}}
+\renewcommand{\algorithmicrepeat}{\textbf{repita}}
+\renewcommand{\algorithmicuntil}{\textbf{até que}}
+\renewcommand{\algorithmicwhile}{\textbf{enquanto}}
+\renewcommand{\algorithmicdo}{\textbf{fa\c{c}a}}

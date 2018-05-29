@@ -3,13 +3,86 @@
 %%            Introdução            %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Neste capítulo devem ser apresentados o contexto do seu trabalho e o problema que deseja abordar, bem como os objetivos que deseja alcançar e a justificativa para o estudo.
+
 \chapter{Introdução}
     \label{cha:intro}
-    \markright{}    % remove nome da seção do cabeçalho
 
+    Neste capítulo devem ser apresentados o contexto do seu trabalho e o problema que deseja abordar, bem como os objetivos que deseja alcançar e a justificativa para o estudo.
+    
+    Os exemplos de inclusão e como referenciar e uma figura, tabela, quadro e algoritmo podem ser observados na Figura~\ref{fig:figura}, Tabela~\ref{tab:tabela}, Quadro~\ref{tab:quadro}
+    
+    \begin{figure}[h]
+        \centering
+        \caption{Exemplo de Figura}
+        \includegraphics{lib/logoufrn.jpg}
+        % Contém Fonte: 
+        \source{O Autor (\imprimirdata)}
+        \label{fig:figura}
+    \end{figure}
+    
+    \begin{table}[h]
+        \centering
+        \caption{Exemplo de Tabela}
+        % c -> center, l -> left, r -> right e | -> linha vertical
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{Título} & \textbf{Título}  \\ \hline %\hline -> linha horizontal
+            x1 & 23 \\ \hline 
+        \end{tabular}
+        \label{tab:tabela}
+        \source{O Autor (\imprimirdata)}
+    \end{table}
+    
+    \begin{quadro}[h]
+        \centering
+        \caption{Exemplo de Quadro}
+        % c -> center, l -> left, r -> right e | -> linha vertical
+        \begin{tabular}{c|c}
+            \textbf{Título} & \textbf{Título}  \\ \hline
+            chave & valor em texto
+        \end{tabular}
+        \label{tab:quadro}
+        \source{O Autor (\imprimirdata)}
+    \end{quadro}
+    
+    % Tem que ajustar para cada variação, faça isso ao fim do trabalho, coloque no título do Algoritmo ou deixa da seguinte forma com esse H.
+    \begin{algorithm}[H]
+        \caption{Pseudo\hyp{Código} de Exemplo}
+        \label{alg:algoritmo}
+        \SetAlgoLined
+        \begin{algorithmic}[1]
+            \REQUIRE entender, estresse
+            \ENSURE estresse $\leftarrow$ 0, entender $\leftarrow$ FALSE
+            \REPEAT
+            	\STATE leia o template com calma
+            	\STATE tente entender
+            	\IF{entender}
+                    \STATE entender $\leftarrow$ TRUE
+                \ELSE
+                    \STATE estresse $\leftarrow$ estresse + 1
+                \ENDIF
+            \UNTIL{entender $\neq$ TRUE}
+            \RETURN estresse
+        \end{algorithmic}
+    \end{algorithm}
+    \begin{center}
+        \vspace{-2em}
+        \source{O Autor (\imprimirdata)}
+    \end{center}
+    
+    
+    % Tópicos propostos, para remover algum destes tópicos
+    %comente a linha referente ao tópico que deseja remover
+    
+    % Contextualização e problema
     \input{textuais/capitulos/1/sub-topicos/ContextualizacaoEProblema}
+    % Objetivos (geral e específicos)
     \input{textuais/capitulos/1/sub-topicos/Objetivos}
+    % Delimitação do estudo
     \input{textuais/capitulos/1/sub-topicos/DelimitacaoDoEstudo}
+    % Justificativa
     \input{textuais/capitulos/1/sub-topicos/Justificativa}
+    % Apresentação do trabalho
     \input{textuais/capitulos/1/sub-topicos/ApresentacaoDoTrabalho}
 
