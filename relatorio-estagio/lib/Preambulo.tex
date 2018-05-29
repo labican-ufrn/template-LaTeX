@@ -3,43 +3,93 @@
 %%       Importação de pacotes       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% referencias
-\begin{comment}
-    alf - referencias em ordem alfabética
-    bibjustif - justificar referências
-    abnt-etal-text=it - texto (et.al.) em itálico
-\end{comment}
-\usepackage[alf, bibjustif, abnt-etal-text=it]{abntex2cite}
+% Acrônimos (Siglas e Abreviaturas)
+\usepackage{acronym}
 
-% fontes e símbolos matemáticos
-\usepackage{amsfonts, amssymb, amsmath}
+% Pacote para o desenvolvimento de algoritmos e codificação utf8
+\usepackage[portuguese, ruled, linesnumbered]{algorithm2e}
 
-% manutenção das legendas em imagens (fonte pequena, 10pt)
+\usepackage[brazil]{babel}
+
+% Paginas com as citações na bibl
+\usepackage[brazilian]{backref}
+
+% Fontes e símbolos matemáticos
+\usepackage{amsfonts, amsmath, amssymb}
+
+% Manutenção das legendas em imagens (fonte pequena, 10pt)
 \usepackage[font=small]{caption}
 
-% manutenção da marcação em listas (enumerator)
+% Manutenção da marcação em listas (enumerator)
 \usepackage{enumitem}
 
-% codificação da fonte em 8 bits
+% Codificação da fonte em 8 bits
 \usepackage[T1]{fontenc}
 
-% dimensões do documento
-\usepackage[left=3.0cm, right=2.0cm, top=3.0cm, bottom=2.0cm]{geometry}
-
-% inserir figuras
+% Inserir figuras
 \usepackage{graphicx}
 
-% hifenização das palavras
+% Dimensões do documento
+\usepackage[left=3.0cm, right=2.0cm, top=3.0cm, bottom=2.0cm]{geometry}
+
+% Glossário
+\usepackage[nonumberlist,style=index]{glossaries}
+
+% Hifenização das palavras 
 \usepackage{hyphenat}
 
-% endentação do primeiro parágrafo de cada seção
+% Numerar as linhas do Documento, facilita correções
+\usepackage{lineno}
+
+% Índice
+\usepackage{imakeidx}
+
+% Identar do primeiro parágrafo de cada seção
 \usepackage{indentfirst}
 
-% acentuação direta
+% Acentuação direta
 \usepackage[utf8]{inputenc}
 
-% rotacionar elementos
+% para melhorias de justificação
+\usepackage{microtype}
+
+% Rotacionar elementos
 \usepackage{rotating}
 
-% manutenção do espaçamento entre linhas
+% Manutenção do espaçamento entre linhas
 \usepackage{setspace}
+
+
+
+% Referências
+\usepackage[alf, bibjustif, abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}
+
+
+
+\usepackage{placeins}
+
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand*{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+ \ifcase #3 %
+ Nenhuma citação no texto.%
+ \or
+ Citado na página #2.%
+ \else
+ Citado #1 vezes nas páginas #2.%
+ \fi}%
+% ---
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%         Indentação           %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip

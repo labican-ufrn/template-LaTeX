@@ -2,3 +2,120 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%          Informações do documento          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% São variáveis do pacote abntex2
+
+% Título do Trabalho
+\titulo{TITULO DO TRABALHO}
+
+% Tipo do trabalho
+\tipotrabalho{Relatório (Estágio Supervisionado)}
+
+% Seu nome
+\autor{AUTOR DO TRABALHO}
+
+% Nível acadêmico + nome
+\orientador{ORIENTADOR DO TRABALHO}
+
+% descomente se o seu trabalho possuir co-orientador
+% Nível acadêmico + nome
+% \coorientador{COORIENTADOR DO TRABALHO}
+
+% Local onde o trabalho foi entregue
+\local{Caicó - RN}
+
+% Ano
+\data{\the\year}
+
+% Instituição onde o trabalho foi entregue
+\instituicao{
+    UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE\par
+    CENTRO DE ENSINO SUPERIOR DO SERIDÓ \par
+    DEPARTAMENTO DE COMPUTAÇÃO E TECNOLOGIA \par
+    BACHARELADO EM SISTEMAS DE INFORMAÇÃO \par
+}
+
+% Texto na minipágina da Folha de Rosto
+\preambulo{\textbf{Relatório de Estágio Supervisionado I} apresentado ao curso de graduação em Sistemas de Informação, como parte da avaliação da disciplina Estágio Supervisionado I.}
+
+
+% Renomeação do conteúdo das variáveis
+\renewcommand{\imprimirorientadorRotulo}{Orientador(a): }
+\renewcommand{\imprimircoorientadorRotulo}{Co-Orientador(a): }
+\renewcommand{\imprimircapa}{\input{pre-textuais/Capa}}
+\renewcommand{\imprimirfolhaderosto}{\input{pre-textuais/FolhaDeRosto}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %%
+%%        Comandos usados no documento          %%
+%%                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                        %%
+%% Criando novos comandos %%
+%%                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Criar fonte em imagens, tabelas e quadros
+\newcommand{\source}[1]{\legend{\textbf{Fonte:} {#1}}}
+
+% texto em arial
+%\renewcommand{\sfdefault}{phv}
+%\renewcommand{\rmdefault}{phv}
+
+% texto em Times
+\renewcommand{\sfdefault}{ptm}
+\renewcommand{\rmdefault}{ptm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%            Quadros           %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\quadroname}{Quadro}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+% \counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+\setfloatlocations{quadro}{hbtp}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %%
+%%   Configurações de aparência do PDF final    %%
+%%                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%      Informações do PDF      %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\hypersetup{
+    %  	pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+        pdfsubject={\imprimirpreambulo},
+        pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+    %   false: boxed links; true: colored links
+		colorlinks=true,
+    % 	color of internal links
+        linkcolor=blue,
+    %   color of links to bibliography
+        citecolor=blue,
+    %   color of file links
+        filecolor=magenta,
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother

@@ -12,21 +12,53 @@
     brazil,         % idioma padrão do documento
 ]{abntex2}
 
-% inclusão dos pacotes usados
+% Incluir pacotes usados
 \input{lib/Preambulo}
 
-% inclusão das informações do documento e métodos criados e alterados
+% Informações do documento e métodos criados e alterados
 \input{lib/DocumentoInfo}
 
 \begin{document}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%    Elementos Pré-textuais    %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Esse comando define as estruturas a seguir como elementos pré-textuais
+    \pretextual
+    
+    % Este comando imprime a Capa com informações do Preambulo.tex
+    \imprimircapa
+    
+    % Paginação em números
+    \pagenumbering{arabic}
+    
+    % Este comando imprime a Folha de Rosto com informações do Preambulo.tex
+    \imprimirfolhaderosto
 
-    \input{pre-textuais/Listas.tex}
+    \input{pre-textuais/Listas}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%      Elementos Textuais      %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Esse comando define as estruturas a seguir como elementos textuais
+    \textual
+    
+    \input{textuais/capitulo_1/Introducao}
+    \input{textuais/capitulo_2/FundamentacaoTeorica}
+    \input{textuais/capitulo_3/Atividades}
+    \input{textuais/capitulo_4/Conclusoes}
 
-    \input{textuais/capitulo_1/Introducao.tex}
-    \input{textuais/capitulo_2/FundamentacaoTeorica.tex}
-    \input{textuais/capitulo_3/AtividadesDesenvolvidas.tex}
-    \input{textuais/capitulo_4/Conclusoes.tex}
-
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%    Elementos Pós-textuais    %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Esse comando define as estruturas a seguir como elementos pós-textuais
+    \postextual
+    
+    % Referências
     \bibliography{pos-textuais/referencias}
-    \markright{}
+    
+    % Elemento Obrigatório para TCC I
+    % \input{pos-textuais/Apendice}
+    
+    % Elemento Optativo para TCC I e II
+    % \input{pos-textuais/Anexo}
 \end{document}
