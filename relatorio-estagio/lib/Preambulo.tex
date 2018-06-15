@@ -1,21 +1,24 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%       Importação de pacotes       %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %%
+%%          Importação de pacotes               %%
+%%                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Acrônimos (Siglas e Abreviaturas)
 \usepackage{acronym}
 
 % Pacote para o desenvolvimento de algoritmos e codificação utf8
-\usepackage[portuguese, ruled, linesnumbered]{algorithm2e}
-
-\usepackage[brazil]{babel}
-
-% Paginas com as citações na bibl
-\usepackage[brazilian]{backref}
+\usepackage[portuguese,lined,boxed,ruled]{algorithm2e}
+\usepackage{algorithmic}
 
 % Fontes e símbolos matemáticos
 \usepackage{amsfonts, amsmath, amssymb}
+
+\usepackage[brazil]{babel}
+
+\usepackage{booktabs}
+
 
 % Manutenção das legendas em imagens (fonte pequena, 10pt)
 \usepackage[font=small]{caption}
@@ -38,9 +41,6 @@
 % Hifenização das palavras 
 \usepackage{hyphenat}
 
-% Numerar as linhas do Documento, facilita correções
-\usepackage{lineno}
-
 % Índice
 \usepackage{imakeidx}
 
@@ -50,8 +50,16 @@
 % Acentuação direta
 \usepackage[utf8]{inputenc}
 
+% Gerador de Texto
+\usepackage{lipsum}
+
 % para melhorias de justificação
 \usepackage{microtype}
+
+% Mescla de células em tabelas
+\usepackage{multirow}
+
+\usepackage{placeins}
 
 % Rotacionar elementos
 \usepackage{rotating}
@@ -59,37 +67,38 @@
 % Manutenção do espaçamento entre linhas
 \usepackage{setspace}
 
+% Cria rodapé em tabelas 
+\usepackage{threeparttable}
 
+% Texto em Times New Roman
+\usepackage{times}
+
+%\usepackage{tocloft}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pacotes com Hierarquia %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[brazilian, hyperpageref]{backref}	 % Paginas com as citações na bibl
 
 % Referências
 \usepackage[alf, bibjustif, abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}
 
 
 
-\usepackage{placeins}
-
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 % Texto padrão antes do número das páginas
-\renewcommand*{\backref}{}
+\renewcommand{\backref}{}
 % Define os textos da citação
 \renewcommand*{\backrefalt}[4]{
- \ifcase #3 %
- Nenhuma citação no texto.%
- \or
- Citado na página #2.%
- \else
- Citado #1 vezes nas páginas #2.%
- \fi}%
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #3 vezes nas páginas #2.%
+	\fi}%
 % ---
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                              %%
-%%         Indentação           %%
-%%                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% O tamanho do parágrafo é dado por:
-\setlength{\parindent}{1.3cm}
-
-% Controle do espaçamento entre um parágrafo e outro:
-\setlength{\parskip}{0.2cm}  % tente também \onelineskip

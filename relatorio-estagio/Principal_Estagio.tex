@@ -25,14 +25,17 @@
     % Esse comando define as estruturas a seguir como elementos pré-textuais
     \pretextual
     
-    % Este comando imprime a Capa com informações do Preambulo.tex
-    \imprimircapa
-    
-    % Paginação em números
-    \pagenumbering{arabic}
-    
-    % Este comando imprime a Folha de Rosto com informações do Preambulo.tex
-    \imprimirfolhaderosto
+    %espaçamento de 1.0
+    \begin{SingleSpace}
+        % Este comando imprime a Capa com informações do Preambulo.tex
+        \imprimircapa
+        
+        % Paginação em números
+        \pagenumbering{arabic}
+        
+        % Este comando imprime a Folha de Rosto com informações do Preambulo.tex
+        \imprimirfolhaderosto
+    \end{SingleSpace}
 
     \input{pre-textuais/Listas}
     
@@ -42,6 +45,10 @@
     % Esse comando define as estruturas a seguir como elementos textuais
     \textual
     
+    % Tutorial
+    \input{textuais/capitulo_0/Tutorial}
+    
+    % Esses importam
     \input{textuais/capitulo_1/Introducao}
     \input{textuais/capitulo_2/FundamentacaoTeorica}
     \input{textuais/capitulo_3/Atividades}
@@ -54,7 +61,7 @@
     \postextual
     
     % Referências
-    \bibliography{pos-textuais/referencias}
+    \bibliography{pos-textuais/Referencias}
     
     % Elemento Obrigatório para TCC I
     % \input{pos-textuais/Apendice}

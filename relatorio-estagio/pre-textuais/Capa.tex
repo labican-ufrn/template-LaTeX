@@ -5,39 +5,30 @@
 %%                                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Este comando configura essa página com o estilo "vazio"
 \thispagestyle{empty}
 
-% Inclusão do logo da UFRN 
 \begin{figure}
     \centering
-    \includegraphics[]{lib/logoufrn.jpg}
+    \includegraphics[]{lib/Logoufrn.jpg}
 \end{figure}
 
-% Inicia um conteiner no centro (Horizontal) da página
 \begin{center}
-
-    % Imprime a Instituição 
-    \Large{\imprimirinstituicao}
+    \large{\imprimirinstituicao}
     
     \vspace{\stretch{2}}
     
-    % Imprime o título do trabalho em SMAllCAPS
-    \large{\textsc{\imprimirtitulo}}
+    \large{\MakeUppercase{\imprimirtitulo: \imprimirsubtitulo}}
     
     \vspace{\stretch{2}}
     
-    % Imprime o nome do autor em SMAllCAPS
-    \textsc{\large{\textbf{\imprimirautor}}}
+    \large{\MakeUppercase{\textbf{\imprimirautor}}}
     
     \vspace{\stretch{3}}
     
-    % Imprime Local e Data
     \large{\imprimirlocal} \\
     \large{\imprimirdata}
 \end{center}
 
-% Nova página
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                              %%

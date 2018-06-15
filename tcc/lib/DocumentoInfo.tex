@@ -1,3 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %%
+%%        Comandos usados no documento          %%
+%%                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Capa e Folha de Rosto
+\renewcommand{\imprimircapa}{\input{pre-textuais/Capa}}
+\renewcommand{\imprimirfolhaderosto}{\input{pre-textuais/FolhaDeRosto}}
+
+% subtítulo
+\providecommand{\imprimirsubtitulo}{}
+\newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
+
+% Rótulo do orientador
+\renewcommand{\imprimirorientadorRotulo}{Orientador(a): }
+\renewcommand{\imprimircoorientadorRotulo}{Co-orientador(a): }
+
+% criar fonte em imagens, tabelas e quadros
+\newcommand{\source}[1]{\legend{\textbf{Fonte:} {#1}}}    
+
+% texto em arial
+%\renewcommand{\sfdefault}{phv}
+%\renewcommand{\rmdefault}{phv}
+
+% texto em Times
+%\renewcommand{\sfdefault}{ptm}
+%\renewcommand{\rmdefault}{ptm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%          Informações do documento          %%
@@ -18,25 +45,11 @@
 
 \preambulo{Trabalho de conclusão de curso apresentado ao curso de graduação em Sistemas de Informação, como parte dos requisitos para obtenção do título de Bacharel em Sistemas de Informação da Universidade Federal do Rio Grande do Norte.}
 
-\renewcommand{\imprimirorientadorRotulo}{Orientador(a): }
-\renewcommand{\imprimircoorientadorRotulo}{Co-orientador(a): }
-\renewcommand{\imprimircapa}{\input{pre-textuais/Capa}}
-\renewcommand{\imprimirfolhaderosto}{\input{pre-textuais/FolhaDeRosto}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                              %%
 %%        Comandos usados no documento          %%
 %%                                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\source}[1]{\legend{Fonte {--} {#1}}}     % criar fonte em imagens, tabelas e quadros
-
-% texto em arial
-%\renewcommand{\sfdefault}{phv}
-%\renewcommand{\rmdefault}{phv}
-
-% texto em Times
-\renewcommand{\sfdefault}{ptm}
-\renewcommand{\rmdefault}{ptm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                              %%
@@ -109,6 +122,10 @@
 %%                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Algoritmos
+% \floatname{algorithm}{Algoritmo}%Algoritmo
+% \renewcommand{\listalgorithmname}{LISTA DE ALGORITMOS}
+
 \renewcommand{\algorithmicindent}{3.0em}
 \renewcommand{\algorithmicrequire}{\textbf{entrada}}
 \renewcommand{\algorithmicensure}{\textbf{garanta}}
@@ -125,3 +142,4 @@
 \renewcommand{\algorithmicuntil}{\textbf{até que}}
 \renewcommand{\algorithmicwhile}{\textbf{enquanto}}
 \renewcommand{\algorithmicdo}{\textbf{fa\c{c}a}}
+

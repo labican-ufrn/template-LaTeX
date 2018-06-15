@@ -12,10 +12,13 @@
 \usepackage[portuguese,lined,boxed,ruled]{algorithm2e}
 \usepackage{algorithmic}
 
-\usepackage[brazil]{babel}
-
 % Fontes e símbolos matemáticos
 \usepackage{amsfonts, amsmath, amssymb}
+
+\usepackage[brazil]{babel}
+
+\usepackage{booktabs}
+
 
 % Manutenção das legendas em imagens (fonte pequena, 10pt)
 \usepackage[font=small]{caption}
@@ -38,11 +41,9 @@
 % Hifenização das palavras 
 \usepackage{hyphenat}
 
-% Numerar as linhas do Documento, facilita correções
-\usepackage{lineno}
-
 % Índice
 \usepackage{imakeidx}
+
 
 % Identar do primeiro parágrafo de cada seção
 \usepackage{indentfirst}
@@ -52,6 +53,9 @@
 
 % para melhorias de justificação
 \usepackage{microtype}
+
+% Mescla de células em tabelas
+\usepackage{multirow}
 
 \usepackage{placeins}
 
@@ -64,30 +68,35 @@
 % Cria rodapé em tabelas 
 \usepackage{threeparttable}
 
+% Texto em Times New Roman
+\usepackage{times}
+
 %\usepackage{tocloft}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Pacotes com Hierarquia %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Paginas com as citações na bibl
-\usepackage[brazilian]{backref}
+\usepackage[brazilian, hyperpageref]{backref}	 % Paginas com as citações na bibl
 
 % Referências
 \usepackage[alf, bibjustif, abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}
 
 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 % Texto padrão antes do número das páginas
-\renewcommand*{\backref}{}
+\renewcommand{\backref}{}
 % Define os textos da citação
 \renewcommand*{\backrefalt}[4]{
-    \ifcase #3 %
-    Nenhuma citação no texto.%
-    \or
-    Citado na página #2.%
-    \else
-    Citado #1 vezes nas páginas #2.%
-    \fi
-}%
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #3 vezes nas páginas #2.%
+	\fi}%
 % ---

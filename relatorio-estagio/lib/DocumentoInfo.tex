@@ -1,72 +1,76 @@
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%          Informações do documento          %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% São variáveis do pacote abntex2
-
-% Título do Trabalho
-\titulo{TITULO DO TRABALHO}
-
-% Tipo do trabalho
-\tipotrabalho{Relatório (Estágio Supervisionado)}
-
-% Seu nome
-\autor{AUTOR DO TRABALHO}
-
-% Nível acadêmico + nome
-\orientador{ORIENTADOR DO TRABALHO}
-
-% descomente se o seu trabalho possuir co-orientador
-% Nível acadêmico + nome
-% \coorientador{COORIENTADOR DO TRABALHO}
-
-% Local onde o trabalho foi entregue
-\local{Caicó - RN}
-
-% Ano
-\data{\the\year}
-
-% Instituição onde o trabalho foi entregue
-\instituicao{
-    UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE\par
-    CENTRO DE ENSINO SUPERIOR DO SERIDÓ \par
-    DEPARTAMENTO DE COMPUTAÇÃO E TECNOLOGIA \par
-    BACHARELADO EM SISTEMAS DE INFORMAÇÃO \par
-}
-
-% Texto na minipágina da Folha de Rosto
-\preambulo{\textbf{Relatório de Estágio Supervisionado I} apresentado ao curso de graduação em Sistemas de Informação, como parte da avaliação da disciplina Estágio Supervisionado I.}
-
-
-% Renomeação do conteúdo das variáveis
-\renewcommand{\imprimirorientadorRotulo}{Orientador(a): }
-\renewcommand{\imprimircoorientadorRotulo}{Co-Orientador(a): }
-\renewcommand{\imprimircapa}{\input{pre-textuais/Capa}}
-\renewcommand{\imprimirfolhaderosto}{\input{pre-textuais/FolhaDeRosto}}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                              %%
 %%        Comandos usados no documento          %%
 %%                                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Capa e Folha de Rosto
+\renewcommand{\imprimircapa}{\input{pre-textuais/Capa}}
+\renewcommand{\imprimirfolhaderosto}{\input{pre-textuais/FolhaDeRosto}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                        %%
-%% Criando novos comandos %%
-%%                        %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subtítulo
+\providecommand{\imprimirsubtitulo}{}
+\newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
 
-% Criar fonte em imagens, tabelas e quadros
-\newcommand{\source}[1]{\legend{\textbf{Fonte:} {#1}}}
+% Rótulo do orientador
+\renewcommand{\imprimirorientadorRotulo}{Orientador(a): }
+
+% Rótulo do co-orientador
+% \renewcommand{\imprimircoorientadorRotulo}{Co-orientador(a): }
+
+% criar fonte em imagens, tabelas e quadros
+\newcommand{\source}[1]{\legend{\textbf{Fonte:} {#1}}}    
 
 % texto em arial
 %\renewcommand{\sfdefault}{phv}
 %\renewcommand{\rmdefault}{phv}
 
 % texto em Times
-\renewcommand{\sfdefault}{ptm}
-\renewcommand{\rmdefault}{ptm}
+%\renewcommand{\sfdefault}{ptm}
+%\renewcommand{\rmdefault}{ptm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %%
+%%          Informações do documento            %%
+%%                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titulo{\textbf{Título do Trabalho}}
+
+% Se houver
+\subtitulo{Subtítulo do Trabalho}
+
+\tipotrabalho{Relatório de Estágio (bacharel em Sistema de Informação)}
+
+\autor{Autor do Trabalho}
+
+% nível acadêmico + nome
+% Dr/Dra  MSc/MSca
+\orientador{Dr. Professor}
+
+% nível acadêmico + nome
+% \coorientador{}
+
+\local{Caicó - RN}
+
+\data{\the\year}
+
+\instituicao{
+    UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE \\
+    CENTRO DE ENSINO SUPERIOR DO SERIDÓ \\
+    DEPARTAMENTO DE COMPUTAÇÃO E TECNOLOGIA \\
+    BACHARELADO EM SISTEMAS DE INFORMAÇÃO
+}
+
+%% Se for TCC II acrescente mais um I
+\preambulo{\textbf{Relatório de Estágio Supervisionado I}, apresentado ao Curso de Bacharelado em Sistemas de Informação da Universidade Federal do Rio Grande do Norte, como parte dos requisitos para obtenção do título de Bacharel em Sistemas de Informação.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
+%%          Numeração           %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\counterwithout{equation}{chapter}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                              %%
@@ -80,12 +84,12 @@
 \newlistentry{quadro}{loq}{0}
 
 % configurações para atender às regras da ABNT
-\setfloatadjustment{quadro}{\centering}
-% \counterwithout{quadro}{chapter}
+%\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
 \renewcommand{\cftquadroname}{\quadroname\space} 
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
-\setfloatlocations{quadro}{hbtp}
+%\setfloatlocations{quadro}{}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,26 +100,60 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                              %%
+%%         Indentação           %%
+%%                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.5cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                              %%
 %%      Informações do PDF      %%
 %%                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \hypersetup{
-    %  	pagebackref=true,
-		pdftitle={\@title}, 
-		pdfauthor={\@author},
-        pdfsubject={\imprimirpreambulo},
-        pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
-    %   false: boxed links; true: colored links
-		colorlinks=true,
-    % 	color of internal links
-        linkcolor=blue,
-    %   color of links to bibliography
-        citecolor=blue,
-    %   color of file links
-        filecolor=magenta,
-		urlcolor=blue,
-		bookmarksdepth=4
+	pdftitle={\@title}, 
+	pdfauthor={\@author},
+    pdfsubject={\imprimirpreambulo},
+    pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+%   false: boxed links; true: colored links
+	colorlinks=true,
+% 	color of internal links
+    linkcolor=blue,
+%   color of links to bibliography
+    citecolor=blue,
+%   color of file links
+    filecolor=magenta,
+	urlcolor=blue,
+	bookmarksdepth=4
 }
 \makeatother
+
+% Algoritmos
+% \floatname{algorithm}{Algoritmo}%Algoritmo
+% \renewcommand{\listalgorithmname}{LISTA DE ALGORITMOS}
+
+\renewcommand{\algorithmicindent}{3.0em}
+\renewcommand{\algorithmicrequire}{\textbf{entrada}}
+\renewcommand{\algorithmicensure}{\textbf{garanta}}
+\renewcommand{\algorithmicreturn}{\textbf{retorne}}
+\renewcommand{\algorithmicor}{\textbf{ou}}
+\renewcommand{\algorithmicand}{\textbf{e}}
+\renewcommand{\algorithmicend}{\textbf{fim}}
+\renewcommand{\algorithmicif}{\textbf{se}}
+\renewcommand{\algorithmicelse}{\textbf{sen\~ao}}
+\renewcommand{\algorithmicthen}{\textbf{ent\~ao}}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para cada}}
+\renewcommand{\algorithmicrepeat}{\textbf{repita}}
+\renewcommand{\algorithmicuntil}{\textbf{até que}}
+\renewcommand{\algorithmicwhile}{\textbf{enquanto}}
+\renewcommand{\algorithmicdo}{\textbf{fa\c{c}a}}
+
