@@ -6,8 +6,6 @@ Modelo para criação de documentos acadêmicos para o curso de Bacharelado de S
 
 Estes modelos representam os seguintes documentos:
 - [X] Trabalho de Conclusão de Curso (**TCC**);
-- [ ] Documentos referentes ao estágio:
-  - [ ] Relatório final;
-  - [ ] Termo de compromisso.
-- [ ] Apresentação em slides;
+- [X] Relatório final do Estágio;
+- [X] Apresentação em slides;
 - [ ] Manual de uso destes modelos e elementos utilizados da biblioteca *abntex2*.
