@@ -3,7 +3,7 @@
 %%        Comandos usados no documento          %%
 %%                                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Capa e Folha de Rosto
+% Capa e Folha de Rosto e Folha de Aprovação
 \renewcommand{\imprimircapa}{\input{pre-textuais/Capa}}
 \renewcommand{\imprimirfolhaderosto}{\input{pre-textuais/FolhaDeRosto}}
 
@@ -26,25 +26,25 @@
 %%          Informações do documento          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\titulo{TITULO DO TRABALHO}
-\tipotrabalho{Monografia (bacharel em Sistema de Informação) }
+
+% Preencha com os seus dados
+\titulo{TITULO DO TRABALHO: SUBTÍTULO}
+\tipotrabalho{Monografia (Curso) }
 \autor{AUTOR DO TRABALHO}
-\orientador{ORIENTADOR DO TRABALHO}     % nível acadêmico + nome
-\local{Caicó- RN}
+\orientador{Orientador do Trabalho}     % nível acadêmico + nome
+\local{CIDADE - RN}
 \data{\the\year}
 \instituicao{
     UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE\par
-    CENTRO DE ENSINO SUPERIOR DO SERIDÓ \par
-    DEPARTAMENTO DE COMPUTAÇÃO E TECNOLOGIA \par
-    BACHARELADO EM SISTEMAS DE INFORMAÇÃO \par
+    CENTRO DE ENSINO SUPERIOR... \par
+    CURSO DE ... \par
 }
-
 
 % Rótulo do orientador
 \renewcommand{\imprimirorientadorRotulo}{Orientador(a): }
 \renewcommand{\imprimircoorientadorRotulo}{Co-orientador(a): }
 
-\preambulo{Trabalho de conclusão de curso apresentado ao curso de graduação em Sistemas de Informação, como parte dos requisitos para obtenção do título de Bacharel em Sistemas de Informação da Universidade Federal do Rio Grande do Norte.}
+\preambulo{Trabalho de conclusão de curso apresentado ao curso de graduação em (Nome do Curso), como parte dos requisitos para obtenção do título de (Título/ em (Curso) da Universidade Federal do Rio Grande do Norte.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                              %%
@@ -54,7 +54,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                              %%
-%%            Quadros           %%
+%%            Tabelas           %%
 %%                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\quadroname}{Quadro}
@@ -94,9 +94,9 @@
     %   false: boxed links; true: colored links
 		colorlinks=true,
     % 	color of internal links
-        linkcolor=blue,
+        linkcolor=black,
     %   color of links to bibliography
-        citecolor=blue,
+        citecolor=black,
     %   color of file links
         filecolor=magenta,
 		urlcolor=blue,
@@ -143,4 +143,3 @@
 \renewcommand{\algorithmicuntil}{\textbf{até que}}
 \renewcommand{\algorithmicwhile}{\textbf{enquanto}}
 \renewcommand{\algorithmicdo}{\textbf{fa\c{c}a}}
-
