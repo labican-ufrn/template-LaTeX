@@ -1,4 +1,3 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                              %%
 %%          Importação de pacotes               %%
@@ -7,6 +6,8 @@
 
 % Acrônimos (Siglas e Abreviaturas)
 \usepackage{acronym}
+
+\hypersetup{hidelinks} % Isso desativa a coloração dos links
 
 % Pacote para o desenvolvimento de algoritmos e codificação utf8
 \usepackage[portuguese,lined,boxed,ruled]{algorithm2e}
@@ -28,6 +29,31 @@
 
 % Codificação da fonte em 8 bits
 \usepackage[T1]{fontenc}
+
+% Pacote para formatação de títulos
+\usepackage{titlesec}
+
+% Configuração da fonte para Arial (Helvetica)
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\sfdefault}{phv}
+
+\titleformat{\section}
+  {\bfseries\normalsize} % Define a fonte para Arial (Helvetica) e tamanho 12 para as seções
+  {\thesection}
+  {1em}
+  {}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries} % Define negrito e tamanho 12 para as subseções
+  {\thesubsection}
+  {1em}
+  {}
+
+\titleformat{\subsubsection}
+  {\normalsize} % Define a fonte para Arial (Helvetica) e tamanho 12 para as subsubseções sem negrito
+  {\thesubsubsection}
+  {1em}
+  {}
 
 % Inserir figuras
 \usepackage{graphicx}
@@ -53,7 +79,7 @@
 % Gerador de Texto
 \usepackage{lipsum}
 
-% para melhorias de justificação
+% Para melhorias de justificação
 \usepackage{microtype}
 
 % Mescla de células em tabelas
@@ -70,35 +96,33 @@
 % Cria rodapé em tabelas 
 \usepackage{threeparttable}
 
-% Texto em Times New Roman
-\usepackage{times}
+% Texto em Arial (Helvetica)
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\sfdefault}{phv}
 
-%\usepackage{tocloft}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Pacotes com Hierarquia %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage[brazilian, hyperpageref]{backref}	 % Paginas com as citações na bibl
+% Pacotes com Hierarquia
+\usepackage[brazilian, hyperpageref]{backref} % Paginas com as citações na bibl
 
 % Referências
 \usepackage[alf, bibjustif, abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}
 
+% Redefine o formato do título das referências
+\renewcommand{\bibsection}{%
+  \clearpage
+  \phantomsection
+  \addcontentsline{toc}{section}{\protect\numberline{}REFERÊNCIAS} % Adiciona o título ao sumário
+  {\centering\bfseries\fontsize{12}{14}\selectfont REFERÊNCIAS\par\nobreak} % Título das referências
+}
 
+% Configurações do pacote hyperref
+\usepackage{hyperref}
 
-% ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+\renewcommand{\backrefpagesname}{}
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
 % Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-	\ifcase #1 %
-		Nenhuma citação no texto.%
-	\or
-		Citado na página #2.%
-	\else
-		Citado #3 vezes nas páginas #2.%
-	\fi}%
-% ---
+\renewcommand*{\backrefalt}[4]{}
+
+% Configurações das tabelas

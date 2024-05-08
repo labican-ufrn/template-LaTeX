@@ -1,4 +1,3 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%          Listas          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -11,7 +10,7 @@
 
 \input{pre-textuais/listas/Siglas}
 
-\input{pre-textuais/listas/Simbolos}
+%\input{pre-textuais/listas/Simbolos}
 
 \input{pre-textuais/listas/Algoritmos}
 
@@ -19,6 +18,8 @@
 %%          Sumário          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand{\contentsname}{SUMÁRIO}
+{\fontsize{12pt}{12pt}\selectfont % Início da modificação para tamanho 12pt
+\renewcommand{\contentsname}{\textbf{\fontsize{12pt}{12pt}\selectfont SUMÁRIO}} % Título do resumo em negrito e tamanho 12pt
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=black}
 \tableofcontents*
 \newpage
