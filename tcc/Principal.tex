@@ -1,4 +1,3 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%           Modelo para criação de           %%
 %%            trabalhos acadêmicos            %%
@@ -8,7 +7,7 @@
     a4paper,        % papel A4
     12pt,           % fonte 12
     oneside,        % impressão em apenas uma face do papel
-%    article,        % formato para artigos
+    article,        % formato para artigos
     english,        % hifenizações em inglês
     brazil,         % idioma padrão do documento
 ]{abntex2}
@@ -24,6 +23,7 @@
 
 % cria o índice remissivo
 \makeindex
+
 \begin{document}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,18 +32,33 @@
     \pretextual
     
     %espaçamento de 1.0
-    \begin{SingleSpace}
-        % Elemento Obrigatório para TCC I e II
-        \imprimircapa
+    % Elemento Obrigatório para TCC I e II
+    \imprimircapa
     
-        % paginação em números
-        \pagenumbering{arabic}
+    % paginação em números
+    \pagenumbering{arabic}
         
-        % Elemento Obrigatório Para TCC I e II
-        \imprimirfolhaderosto
+    % Elemento Obrigatório Para TCC I e II
+    \imprimirfolhaderosto
+
+    % Elemento Obrigatório para TCC II
+    \input{pre-textuais/FolhaDeAprovacao}
+
+    % Elemento Obrigatório para TCC II
+    \input{pre-textuais/Dedicatoria}
+
+    % Elemento Opcional para TCC II
+    \input{ pre-textuais/Agradecimentos}
+
+   % Elemento Opcional para TCC II
+    \input{pre-textuais/Epigrafe}
+
+    % Elemento Obrigatório para TCC II
+    \input{pre-textuais/ResumoEAbstract}
         
-    \end{SingleSpace}
-    
+    % Elemento Obrigatório para TCC II sumário
+    % Figuras, Quadros, Tabelas e Sumário
+    \input{pre-textuais/Listas}
 
     % Elemento Obrigatório TCC II
     % \input{pre-textuais/FichaCatalografica}  
@@ -52,23 +67,20 @@
     % \input{pre-textuais/Errata}
 
     % Elemento Obrigatório para TCC II
-    % \input{pre-textuais/FolhaDeAprovacao}
+    %\input{pre-textuais/FolhaDeAprovacao}
 
     % Elemento Opcional para TCC II
     % \input{pre-textuais/Dedicatoria}
 
     % Elemento Opcional para TCC II
-    % \input{pre-textuais/Agradecimentos}
+    %\input{pre-textuais/Agradecimentos}
 
     % Elemento Opcional para TCC II
     % \input{pre-textuais/Epigrafe}
-
-    % Elemento Obrigatório para TCC II
-    % \input{pre-textuais/ResumoEAbstract}
     
     % Figuras, Quadros, Tabelas e Sumário.
     % Algumas Obrigatórias outras não TCC I e II
-    \input{pre-textuais/Listas}
+    %\input{pre-textuais/Listas}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%      Elementos Textuais      %%
@@ -77,7 +89,6 @@
     
     % Tutorial
     \input{textuais/capitulo_0/Tutorial}
-
 
     % Elemento Obrigatório para TCC I e II
     \input{textuais/capitulo_1/Introducao}
@@ -101,7 +112,8 @@
     %%    Elementos Pós-textuais    %%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \postextual
-    
+    \bibliographystyle{textuais/abntex2-alf.bst}
+
     %Referências
     % Elemento Obrigatório para TCC I e II
     \bibliography{pos-textuais/Referencias}

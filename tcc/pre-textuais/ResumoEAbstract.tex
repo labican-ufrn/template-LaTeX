@@ -1,17 +1,28 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                        %%
 %%         Resumo         %%
 %%                        %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Definir a fonte padrão para Helvetica
+
+% Modificar apenas o título "Resumo" para negrito
+{\fontsize{12pt}{12pt}\selectfont % Início da modificação para tamanho 12pt
+\renewcommand{\resumoname}{\textbf{\fontsize{12pt}{12pt}\selectfont RESUMO}} % Título do resumo em negrito e tamanho 12pt
+
 \begin{resumo}
    \noindent 
-%Escreva aqui.
-
+    O resumo tem a função de resumir os pontos-chave da monografia, 
+    apresentando sucintamente a introdução, metodologia, resultados,  
+    discussão e conclusões, além de destacar a relevância do estudo. 
+    Deve ser conciso, informativo e atrativo, com uma extensão usualmente 
+    entre 150 e 300 palavras, dependendo das diretrizes da instituição 
+    ou da revista acadêmica.
 
     \textbf{Palavras-chave}: 
 \end{resumo}
+}
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                        %%
@@ -19,10 +30,15 @@
 %%                        %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{resumo}[Abstract]
-    \noindent
-%Write here
+% Modificar apenas o título "Resumo" para negrito
+{\fontsize{12pt}{12pt}\selectfont % Início da modificação para tamanho 12pt
+\renewcommand{\abstractname}{\textbf{\fontsize{12pt}{12pt}\selectfont ABSTRACT}} % Título do resumo em negrito e tamanho 12pt
 
+\begin{abstract}
+    \noindent
+The abstract serves the purpose of summarizing the key points of the thesis, briefly presenting the introduction, methodology, results, discussion, and conclusions, while highlighting the study's relevance. It should be concise, informative, and engaging, typically ranging from 150 to 300 words, depending on the guidelines of the institution or academic journal.
     
     \textbf{Keywords}:
-\end{resumo}
+\end{abstract}
+}
+\newpage

@@ -1,12 +1,14 @@
 \begin{folhadeaprovacao}
-
+    {\fontfamily{phv}\selectfont % Define a fonte para Arial apenas dentro deste ambiente
     \begin{center}
-        {\ABNTEXchapterfont\large\imprimirautor}
+        \large\imprimirautor
 
         \vspace*{\fill}\vspace*{\fill}
         
-        \begin{center}
-            \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+           \begin{center}
+            {\normalfont\fontfamily{ptm}\selectfont % Define a fonte para Times New Roman apenas para o título
+            \normalfont\bfseries\Large\imprimirtitulo
+            }% Fim do comando \fontfamily{ptm}\selectfont
         \end{center}
         
         \vspace*{\fill}
@@ -17,7 +19,7 @@
         \end{minipage}%
             \vspace*{\fill}
         
-       \textbf{\imprimirlocal}, 16 de novembro de \imprimirdata
+       \textbf{\imprimirlocal}, xx de mmm de \imprimirdata
    \end{center}
 
    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
@@ -28,11 +30,12 @@
    %\assinatura{\textbf{Professor} \\ Examinador(a) 4}
       
    \begin{center}
-    \vspace*{0.5cm}
-    {\large\imprimirlocal}
-    \par
-    {\large\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
-  
+       \vspace*{0.5cm}
+       {\large\imprimirlocal}
+       \par
+       {\large\imprimirdata}
+       \vspace*{1cm}
+   \end{center}
+  }% Fim do comando \fontfamily{ptm}\selectfont
 \end{folhadeaprovacao}
+\newpage
